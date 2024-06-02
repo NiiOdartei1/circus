@@ -4,39 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHINA - Wuqiao Circus Acrobatics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../events.html">Events</a></li>
-                <li><a href="../gallery.html">Gallery</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="../china-wuqiao-circus.html">Daniel Lamptey</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="event-detail-section">
-            <div class="container">
-                <header class="event-detail-header">
-                    <h2>CHINA - Wuqiao Circus Acrobatics</h2>
-                    <p>Date: 2022</p>
-                </header>
-                <div class="event-gallery">
-                    <img src="../images/bravo-circus-2.jpg" alt="Event Image 1" class="img-fluid">
-                    <img src="../images/bravo-circus-3.jpg" alt="Event Image 2" class="img-fluid">
-                    <!-- Add more images as needed -->
-                </div>
+        <section class="images">
+            <header class="event-detail-header">
+                <h2>CHINA - Wuqiao Circus Acrobatics</h2>
+                <p>Date: 2022</p>
+            </header>
+            <center><h3>Images</h3></center>
+            <div class="gallery">
+                <center><div class="grid-container">
+                    <div class="grid-item">
+                        <img src="../images/events/china/China-header.jpg" alt="Sample Image 1">
+                    </div>
+                    <div class="grid-item">
+                        <img src="../images/events/china/3-in-1.jpg" alt="Sample Image 52">
+                    </div>
+                    <div class="grid-item">
+                        <img src="../images/events/china/street-show.jpg" alt="Sample Image 52">
+                    </div>
+                    <div class="grid-item">
+                        <img src="../images/events/china/family-tree.jpg" alt="Sample Image 52">
+                    </div>
+                    <div class="grid-item">
+                        <img src="../images/events/china/china-poster.jpg" alt="Sample Image 52">
+                    </div>
+                </div></center>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Daniel Lamptey Circus Artist</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="marquee">
+            <b><p>&copy; 2024 Daniel Lamptey Circus Artist</p></b>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+<style>
+    /* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes the full viewport height */
+    background-color: #f5f5f5; /* Light background color */
+}
+.event-detail-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    }
+    .events-detail-header h2 {
+        margin: 0;
+        font-size: 3em;
+        color: #333;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* Five columns */
+        grid-gap: 20px; /* Spacing between grid items */
+        max-width: 1200px; /* Limit maximum width */
+        width: 100%; /* Ensure full width within the container */
+    }
+    .grid-item {
+        overflow: hidden; /* Prevent overflow for videos */
+        width: 200px; /* Fixed width for grid items */
+        height: 200px; /* Fixed height for grid items */
+        border-radius: 10px;
+    }
+    .grid-item img {
+        width: 100%; /* Fill the grid item's width */
+        height: 100%; /* Fill the grid item's height */
+        object-fit: cover; /* Ensure images/videos cover the entire area */
+        display: block; /* Ensure images/videos do not create whitespace */
+        border-radius: inherit; /* Inherit border radius from parent */
+        transition: transform 0.3s ease; /* Smooth transition effect */
+    }
+    .grid-item:hover img {
+        transform: scale(1.05); /* Zoom effect on hover */
+    }
+
+/* Responsive layout adjustments */
+@media screen and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); /* Four columns for smaller screens */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for even smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for mobile screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* One column for very small screens */
+    }
+}
+
+@media (max-width:768px){
+    .grid-container .popup-image img{
+        width: 95%;
+    }
+}
+</style>
